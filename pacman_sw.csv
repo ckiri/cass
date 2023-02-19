@@ -1,0 +1,64 @@
+qtile,window manager
+alacritty,terminal emulator written in rust
+rsync,file sync
+jre-openjdk,java runtime enviroment
+virtualbox,virtualization
+libvirt,api for controlling virt engines
+dmenu,rum-prompt
+steam,gaming platform
+slock,screen locker
+fzf,fuzzy-file-finder
+cifs-utils,common internet file system
+nmap,(aur/zenmap - GUI) analyse network
+cups,c unix printing service
+hplip,drivers for HP printer
+bind,dns protocol an utils
+net-tools,config tool for Linux networking
+nmap,network discovery tool
+curl,url retrival utility
+wget,network utility to retrive files from the Web
+alsa-utils,advanced linux sound architecture 
+pulseaudio,sound server 
+bluez,deamons for bluetooth
+bluez-libs,libraries for bluetooth
+bluez-utils,utilities for bluetooth
+pulseaudio-bluetooth,bluetooth support for pulseaudio
+networkmanager,network connection manager
+zip,archiver
+unzip,extract .zip archives
+p7zip,cl file archiver/extractor
+tar,backup & transport files
+redshift,nightlight (adjust color temperature)
+feh,setting background wallpaper
+sxiv,image viewer
+ffmpeg,video suit
+shotcut,graphical video editor
+mpv,videoplayer
+scrot,screenshot utility
+xclip,cl interface to x11 clipboard 
+neovim,texteditor
+freecad,cad
+kicad,ecad
+superslicer,slicer for 3d-printer
+blender,3d-rendering software
+ngspice,schematics simulator
+inkscape, vector graphics editor
+gimp,GNU Image Manipulation Programm
+texlive-most,latex distribution
+gnuplot,math/physics plotting
+github-cli, cli for GitHub
+pass,standart unix password store
+claws-mail,e-mail client
+openvpn,vpn
+ttf-fira-code,mozilla coding fonts (with ligatures)
+ttf-fira-sans,mozilla sans font
+noto-fonts-emoji,google emojis
+zsh,z-shell
+zsh-syntax-highlighting,syntax highlighting for cl
+pdftk,pdf tool
+zathura,pdf reader
+zathura-pdf-poppler,pdf poppler (reading pdfs)
+tipp10,tipp tutor
+code,ide
+octave,math language
+syncthing,sync files p2p
