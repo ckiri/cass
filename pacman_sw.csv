@@ -4,9 +4,7 @@ rsync,file sync
 jre-openjdk,java runtime enviroment
 virtualbox,virtualization
 libvirt,api for controlling virt engines
-dmenu,rum-prompt
 steam,gaming platform
-slock,screen locker
 fzf,fuzzy-file-finder
 cifs-utils,common internet file system
 nmap,(aur/zenmap - GUI) analyse network
@@ -48,8 +46,7 @@ texlive-most,latex distribution
 gnuplot,math/physics plotting
 github-cli, cli for GitHub
 pass,standart unix password store
-claws-mail,e-mail client
-openvpn,vpn
+thunderbird,e-mail client
 ttf-fira-code,mozilla coding fonts (with ligatures)
 ttf-fira-sans,mozilla sans font
 noto-fonts-emoji,google emojis
@@ -62,3 +59,6 @@ tipp10,tipp tutor
 code,ide
 octave,math language
 syncthing,sync files p2p
+firefox, web browser
+thunderbird, e-mail client
+devour, swallowing for windows
