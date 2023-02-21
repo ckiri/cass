@@ -1,0 +1,10 @@
+@startuml
+
+start
+:Update System;
+
+:Setup User;
+#PaleGreen :Ask for Username;
+
+
+@enduml
