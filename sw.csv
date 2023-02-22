@@ -1,3 +1,4 @@
+Package Name,Description
 qtile,window manager
 python-psutil, cpu widget requirement for qtile
 alacritty,terminal emulator written in rust
