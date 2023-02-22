@@ -12,7 +12,7 @@ For `.dotfiles` setup have a look at my other [repo](htts://github.com/ckiri/.do
 
 
 The script creates a User as well as a home directory. It installs the software
-found in this [file](https://github.com/ckiri/cass/sw.csv).
+found in this [file](https://github.com/ckiri/cass/blob/master/sw.csv).
 
 ## Setup/Installation
 
