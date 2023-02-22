@@ -61,7 +61,7 @@ sed -i 's/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8' /etc/locale.gen
 locale-gen
 
 # Install SW from list
-pacman -S $(awk -F "\t" '{print $1}' sw.csv | awk 'NR!=1 {print}')                              # print package name as argument for pacman
+pacman -S $(awk -F "\t" '{print $1}' sw.csv | awk 'NR!=1 {print}')              # print package name as argument for pacman
 
 # Change Shell to zsh
 if [ $shell == 'y' ]
@@ -85,7 +85,7 @@ fi
 # Install software for mobile devices
 if [ $typ == '1' ]
 then
-    sudo pacman -S tlp python-iwlib                                                         # Power Management
+    sudo pacman -S tlp python-iwlib                                             # Power Management
 fi
 
 # Start services
@@ -98,10 +98,20 @@ systemctl start libvirtd.service
 systemctl enable ntpd.service
 systemctl start ntpd.service
 
+# Setup services and options for mobile devices
 if [ $typ == '1' ]
 then
     systemctl enable tlp.service                                                # Enable Powermanagement
     systemctl start tlp.service
+    # Config for "touch" to click the touchpad
+    echo -e "Section \"InputClass\"
+        Identifier \"touchpad\"
+        Driver \"libinput\"
+        MatchIsTouchpad \"on\"
+        Option \"Tapping\" \"on\"
+        Option \"TappingButtonMap\" \"lmr\"
+        Option \"NaturalScrolling\" \"true\"
+    EndSection" >> /etc/X11/xorg.conf.d/30-touchpad.conf
 fi
 
 echo "Setup Finished, exiting now...\n"
