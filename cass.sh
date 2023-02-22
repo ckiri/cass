@@ -29,9 +29,9 @@ read shell
 echo "\n"
 
 # Create a user
-useradd -m $username                                                            # create user with a homedir
-passwd $username                                                                # give the user a pw
-usermod -aG wheel,power,storage,audio,video,optical $username                   # add user to different groups
+useradd -m $uid                                                                 # create user with a homedir
+passwd $uid                                                                     # give the user a pw
+usermod -aG wheel,power,storage,audio,video,optical $uid                        # add user to different groups
 sed -i 's/# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers    # give wheel group sudo privleges
 
 # Setup dualboot
@@ -43,7 +43,7 @@ then
     grub-mkconfig -o /boot/grub/grub.cfg
 fi
 
-# Setup NTP and System Time with sync server
+# Setup NTP and system time with sync server
 pacman -S ntp
 
 i=0
@@ -54,14 +54,14 @@ do
     true $(( i++ ))
 done
 
-# locale and X11 setup
+# locale setup
 echo "LANG=en_US.UTF-8" > /etc/locale.conf
 sed -i 's/#de_DE.UTF-8 UTF-8/de_DE.UTF-8 UTF-8' /etc/locale.gen
 sed -i 's/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8' /etc/locale.gen
 locale-gen
 
-# Install rest of SW
-pacman -S $(awk -F ',' '{print $1}' pacman_sw.csv)                              # print package name as argument for pacman
+# Install SW from list
+pacman -S $(awk -F "\t" '{print $1}' sw.csv | awk 'NR!=1 {print}')                              # print package name as argument for pacman
 
 # Change Shell to zsh
 if [ $shell == 'y' ]
@@ -71,7 +71,6 @@ then
 fi
 
 # Install VPN
-# TODO: for setup with UNI VPN (HHN) download config etc. form hs-heilbronn.de
 if [$vpn == 'y']
 then
     if [ $device == '1' ]
