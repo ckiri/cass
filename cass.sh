@@ -61,7 +61,7 @@ sed -i 's/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8' /etc/locale.gen
 locale-gen
 
 # Install SW from list
-pacman -S $(awk -F "\t" '{print $1}' sw.csv | awk 'NR!=1 {print}')              # print package name as argument for pacman
+pacman -S $(awk -F ',' '{print $1}' sw.csv | awk 'NR!=1 {print}')              # print package name as argument for pacman
 
 # Change Shell to zsh
 if [ $shell == 'y' ]
