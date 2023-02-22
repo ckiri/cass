@@ -38,7 +38,7 @@ sed -i 's/# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers    
 if [ $boot == 'y' ]
 then
     pacman -S os-prober ntfs-3g
-    sed -i 's/#GRUB_DISABLE_OS_PROBER=false/GRUB_DISABLE_OS_PROBER=false/'
+    sed -i 's/#GRUB_DISABLE_OS_PROBER=false/GRUB_DISABLE_OS_PROBER=false/'\n
     /etc/default/grub
     grub-mkconfig -o /boot/grub/grub.cfg
 fi
@@ -60,11 +60,11 @@ sed -i 's/#de_DE.UTF-8 UTF-8/de_DE.UTF-8 UTF-8' /etc/locale.gen
 sed -i 's/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8' /etc/locale.gen
 locale-gen
 
-# Software Install Script
+# Install rest of SW
 pacman -S $(awk -F ',' '{print $1}' pacman_sw.csv)                              # print package name as argument for pacman
 
 # Change Shell to zsh
-if [$shell == 'y']
+if [ $shell == 'y' ]
 then
     pacman -S zsh zsh-syntax-highlighting
     su $username -c "chsh -s $(which zsh)"
@@ -74,17 +74,17 @@ fi
 # TODO: for setup with UNI VPN (HHN) download config etc. form hs-heilbronn.de
 if [$vpn == 'y']
 then
-    if [$device == '1']
+    if [ $device == '1' ]
     then
         pacman -S openvpn wireguard-tools
-    else if [$device == '2']
+    else if [ $device == '2' ]
     then
         pacman -S openvpn
     fi
 fi
 
 # Install software for mobile devices
-if [$typ == '1']
+if [ $typ == '1' ]
 then
     sudo pacman -S tlp python-iwlib                                                         # Power Management
 fi
@@ -99,7 +99,7 @@ systemctl start libvirtd.service
 systemctl enable ntpd.service
 systemctl start ntpd.service
 
-if [$typ == '1']
+if [ $typ == '1' ]
 then
     systemctl enable tlp.service                                                # Enable Powermanagement
     systemctl start tlp.service
