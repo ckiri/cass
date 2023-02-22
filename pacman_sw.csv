@@ -1,4 +1,5 @@
 qtile,window manager
+python-psutil, cpu widget requirement for qtile
 alacritty,terminal emulator written in rust
 rsync,file sync
 jre-openjdk,java runtime enviroment
@@ -62,3 +63,4 @@ syncthing,sync files p2p
 firefox, web browser
 thunderbird, e-mail client
 devour, swallowing for windows
+scrcpy, stream screen of android device
