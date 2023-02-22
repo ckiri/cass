@@ -1,4 +1,5 @@
 Package Name,Description
+ttf-dejavu,Font family
 qtile,window manager
 python-psutil, cpu widget requirement for qtile
 alacritty,terminal emulator written in rust
@@ -49,11 +50,7 @@ gnuplot,math/physics plotting
 github-cli, cli for GitHub
 pass,standart unix password store
 thunderbird,e-mail client
-ttf-fira-code,mozilla coding fonts (with ligatures)
-ttf-fira-sans,mozilla sans font
 noto-fonts-emoji,google emojis
-zsh,z-shell
-zsh-syntax-highlighting,syntax highlighting for cl
 pdftk,pdf tool
 zathura,pdf reader
 zathura-pdf-poppler,pdf poppler (reading pdfs)
