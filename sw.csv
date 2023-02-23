@@ -11,7 +11,7 @@ cifs-utils,common internet file system
 nmap,(aur/zenmap - GUI) analyse network
 cups,c unix printing service
 hplip,drivers for HP printer
-bind,dns protocol an utils
+bind,dns protocol and utils
 net-tools,config tool for Linux networking
 nmap,network discovery tool
 curl,url retrival utility
