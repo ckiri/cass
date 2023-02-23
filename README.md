@@ -10,7 +10,6 @@ software is installed. The scope of this script is to speed up the configuration
 For `.dotfiles` setup have a look at my other [repo](htts://github.com/ckiri/dotfiles).
 
 
-
 The script creates a User as well as a home directory. It installs the software
 found in this [file](https://github.com/ckiri/cass/blob/master/sw.csv).
 
