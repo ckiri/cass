@@ -7,7 +7,7 @@ Those systems can be `mobile` or `desktop`. According to those **choices**,
 software is installed. The scope of this script speeds up the configuration process.
 
 
-For `.dotfiles` setup have a look at my other [repo](htts://github.com/ckiri/.dotfiles).
+For `.dotfiles` setup have a look at my other [repo](htts://github.com/ckiri/dotfiles).
 
 
 
@@ -16,7 +16,7 @@ found in this [file](https://github.com/ckiri/cass/blob/master/sw.csv).
 
 ## Setup/Installation
 
-### Prerequisits
+### Prerequisites
 
 * A fresh install of Arch-Linux or a Arch based distribution.
 * Git has to be installed

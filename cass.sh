@@ -1,5 +1,5 @@
 #!/bin/sh
-seperator="*******************************************************"
+separator="*******************************************************"
 # Update System
 pacman -Syy                                                                     # update package index
 pacman -S archlinux-keyring                                                     # update keyring
@@ -7,7 +7,7 @@ pacman -Syu sudo                                                                
 
 # Questions for installing the right SW
 echo ""
-echo $seperator
+echo $separator
 echo "Following are a few questions for setting up the system"
 echo ""
 echo "Enter Username for user creation: "
@@ -21,7 +21,7 @@ echo "Do you want to setup dualboot?"
 echo "[y/N]: "
 read boot
 echo ""
-echo "Do you want to install a VPN?"
+echo "Do you want to install a vpn?"
 echo "[y/N]: "
 read vpn
 echo ""
@@ -32,22 +32,22 @@ echo ""
 echo "Do you want to install and setup a vm?"
 echo "[y/N]: "
 read vm
-echo $seperator
+echo $separator
 echo ""
 
-# Create a user
+# create a user
 useradd -m $uid                                                                 # create user with a homedir
 echo ""
-echo $seperator
+echo $separator
 echo "Give the user $uid a password."
 passwd $uid                                                                     # give the user a pw
-echo $seperator
+echo $separator
 echo ""
 usergroups='wheel,power,storage,audio,video,optical'
 usermod -aG $usergroups $uid                                                    # add user to different groups
-sed -i 's/# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers    # give wheel group sudo privleges
+sed -i 's/# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers    # give wheel group sudo privileges
 
-# Setup dualboot
+# setup dualboot
 if [ $boot == 'y' ]
 then
     pacman -S os-prober ntfs-3g
@@ -56,7 +56,7 @@ then
     grub-mkconfig -o /boot/grub/grub.cfg
 fi
 
-# Setup NTP and system time with sync server
+# setup ntp and system time with sync server
 pacman -S ntp
 
 i=0
@@ -73,16 +73,16 @@ sed -i 's/#de_DE.UTF-8 UTF-8/de_DE.UTF-8 UTF-8' /etc/locale.gen
 sed -i 's/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8' /etc/locale.gen
 locale-gen
 
-# Install SW from list
-pacman -S $(awk -F ',' '{print $1}' sw.csv | awk 'NR!=1 {print}')               # read first column of SW list, pipe into awk & print rest without frist line
+# install sw from list
+pacman -S $(awk -F ',' '{print $1}' sw.csv | awk 'NR!=1 {print}')               # read first column of sw list, pipe into awk & print rest without first line
 
-# Install zsh
+# install zsh
 if [ $shell == 'y' ]
 then
     pacman -S zsh zsh-syntax-highlighting
 fi
 
-# Install VPN
+# install vpn sw
 if [$vpn == 'y']
 then
     if [ $device == '1' ]
@@ -94,35 +94,35 @@ then
     fi
 fi
 
-# Install software for mobile devices
+# install software for mobile devices
 if [ $typ == '1' ]
 then
-    sudo pacman -S tlp python-iwlib                                             # Power Management
+    sudo pacman -S tlp python-iwlib                                             # power management
 fi
 
-# Install and setup QEMU/KVM
+# install and setup qemu/kvm
 if [ $vm == 'y' ]
 then
     pacman -Syu qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils
                 openbsd-netcat ebtables iptables libgeustfs
     usermod -aG libvirt $uid
-    systemctl enable libvirtd.service                                           # Enable Virtualisation for Virtualbox
+    systemctl enable libvirtd.service                                           # enable virtualization for vm
     systemctl start libvirtd.service
 fi
 
-# Start services
-systemctl enable cups.service                                                   # Enable Printing Server (Start Service on every startup)
-systemctl start cups.service                                                    # Start Printing Server now
+# start services
+systemctl enable cups.service                                                   # enable printing server (start service on every startup)
+systemctl start cups.service                                                    # start printing server
 
 systemctl enable ntpd.service
 systemctl start ntpd.service
 
-# Setup services and options for mobile devices
+# setup services and options for mobile devices
 if [ $typ == '1' ]
 then
-    systemctl enable tlp.service                                                # Enable Powermanagement
+    systemctl enable tlp.service                                                # enable power management
     systemctl start tlp.service
-    # Config for "touch" to click the touchpad
+    # config for tapping instead of clicking for touchpad
     echo -e "Section \"InputClass\"
         Identifier \"touchpad\"
         Driver \"libinput\"
