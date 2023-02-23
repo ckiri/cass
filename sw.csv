@@ -1,5 +1,5 @@
 Package Name,Description
-ttf-dejavu,Font family
+ttf-dejavu,font family
 qtile,window manager
 python-psutil, cpu widget requirement for qtile
 alacritty,terminal emulator written in rust
@@ -44,7 +44,7 @@ superslicer,slicer for 3d-printer
 blender,3d-rendering software
 ngspice,schematics simulator
 inkscape, vector graphics editor
-gimp,GNU Image Manipulation Programm
+gimp,GNU Image Manipulation Program
 texlive-most,latex distribution
 gnuplot,math/physics plotting
 github-cli, cli for GitHub
@@ -58,6 +58,8 @@ tipp10,tipp tutor
 code,ide
 octave,math language
 syncthing,sync files p2p
-firefox, web browser
-thunderbird, e-mail client
-scrcpy, stream screen of android device
+firefox,web browser
+thunderbird,e-mail client
+scrcpy,stream screen of android device
+xorg,X window system
+xorg-xinit,X.Org initilisation program
