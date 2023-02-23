@@ -5,8 +5,6 @@ python-psutil, cpu widget requirement for qtile
 alacritty,terminal emulator written in rust
 rsync,file sync
 jre-openjdk,java runtime enviroment
-virtualbox,virtualization
-libvirt,api for controlling virt engines
 steam,gaming platform
 fzf,fuzzy-file-finder
 cifs-utils,common internet file system
