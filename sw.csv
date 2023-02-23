@@ -62,3 +62,4 @@ thunderbird,e-mail client
 scrcpy,stream screen of android device
 xorg,X window system
 xorg-xinit,X.Org initilisation program
+rofi,window switcher
