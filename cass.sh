@@ -1,4 +1,5 @@
 #!/bin/sh
+seperator="*******************************************************"
 # Update System
 pacman -Syy                                                                     # update package index
 pacman -S archlinux-keyring                                                     # update keyring
@@ -6,7 +7,7 @@ pacman -Syu sudo                                                                
 
 # Questions for installing the right SW
 echo ""
-echo "*******************************************************"
+echo $seperator
 echo "Following are a few questions for setting up the system"
 echo ""
 echo "Enter Username for user creation: "
@@ -24,23 +25,23 @@ echo "Do you want to install a VPN?"
 echo "[y/N]: "
 read vpn
 echo ""
-echo "Do you want to change the shell to zsh?"
+echo "Do you want install zsh?"
 echo "[y/N]: "
 read shell
 echo ""
 echo "Do you want to install and setup a vm?"
 echo "[y/N]: "
 read vm
-echo "*******************************************************"
+echo $seperator
 echo ""
 
 # Create a user
 useradd -m $uid                                                                 # create user with a homedir
 echo ""
-echo "*******************************************************"
+echo $seperator
 echo "Give the user $uid a password."
 passwd $uid                                                                     # give the user a pw
-echo "*******************************************************"
+echo $seperator
 echo ""
 usergroups='wheel,power,storage,audio,video,optical'
 usermod -aG $usergroups $uid                                                    # add user to different groups
