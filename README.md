@@ -4,7 +4,7 @@
 
 This shellscript sets up system configuration for different devices.
 Those systems can be `mobile` or `desktop`. According to those **choices**,
-software is installed. The scope of this script speeds up the configuration process.
+software is installed. The scope of this script is to speed up the configuration process.
 
 
 For `.dotfiles` setup have a look at my other [repo](htts://github.com/ckiri/dotfiles).
