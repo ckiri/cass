@@ -20,7 +20,7 @@ echo "Do you want to setup dualboot?"
 echo "[y/N]: "
 read boot
 echo ""
-echo "Do you want to install a vpn?"
+echo "Do you want to install a VPN?"
 echo "[y/N]: "
 read vpn
 echo ""
@@ -75,11 +75,10 @@ locale-gen
 # Install SW from list
 pacman -S $(awk -F ',' '{print $1}' sw.csv | awk 'NR!=1 {print}')               # read first column of SW list, pipe into awk & print rest without frist line
 
-# Change Shell to zsh
+# Install zsh
 if [ $shell == 'y' ]
 then
     pacman -S zsh zsh-syntax-highlighting
-    su $username -c "chsh -s $(which zsh)"
 fi
 
 # Install VPN
@@ -106,7 +105,7 @@ then
     pacman -Syu qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils
                 openbsd-netcat ebtables iptables libgeustfs
     usermod -aG libvirt $uid
-    systemctl enable libvirtd.service                                               # Enable Virtualisation for Virtualbox
+    systemctl enable libvirtd.service                                           # Enable Virtualisation for Virtualbox
     systemctl start libvirtd.service
 fi
 
