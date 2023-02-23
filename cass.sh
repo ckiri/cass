@@ -36,7 +36,12 @@ echo ""
 
 # Create a user
 useradd -m $uid                                                                 # create user with a homedir
+echo ""
+echo "*******************************************************"
+echo "Give the user $uid a password."
 passwd $uid                                                                     # give the user a pw
+echo "*******************************************************"
+echo ""
 usergroups='wheel,power,storage,audio,video,optical'
 usermod -aG $usergroups $uid                                                    # add user to different groups
 sed -i 's/# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers    # give wheel group sudo privleges
