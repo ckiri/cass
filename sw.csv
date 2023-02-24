@@ -1,7 +1,6 @@
 Package Name,Description
 ttf-dejavu,font family
 starship,shell prompt
-qtile,window manager
 python-psutil, cpu widget requirement for qtile
 rsync,file sync
 jre-openjdk,java runtime enviroment
