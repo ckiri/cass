@@ -1,4 +1,5 @@
 Package Name,Description
+feh,program for setting bg pics
 ttf-dejavu,font family
 starship,shell prompt
 python-psutil, cpu widget requirement for qtile
