@@ -45,7 +45,7 @@ inkscape, vector graphics editor
 gimp,GNU Image Manipulation Program
 texlive-most,latex distribution
 gnuplot,math/physics plotting
-github-cli, cli for GitHub
+github-cli,cli for GitHub
 pass,standart unix password store
 thunderbird,e-mail client
 noto-fonts-emoji,google emojis
@@ -62,3 +62,4 @@ scrcpy,stream screen of android device
 xorg,X window system
 xorg-xinit,X.Org initilisation program
 rofi,window switcher
+papirus-icon-theme,icon theme
