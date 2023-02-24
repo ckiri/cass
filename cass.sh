@@ -7,7 +7,7 @@ pacman -Syu sudo                                                                
 
 # Questions for installing the right SW
 echo ""
-echo $separator
+echo "*******************************************************"
 echo "Following are a few questions for setting up the system"
 echo ""
 echo "Enter Username for user creation: "
@@ -32,16 +32,16 @@ echo ""
 echo "Do you want to install and setup virtualbox?"
 echo "[y/N]: "
 read vbox
-echo $separator
+echo "*******************************************************"
 echo ""
 
 # create a user
 useradd -m $uid                                                                 # create user with a homedir
 echo ""
-echo $separator
-echo "Give the user $uid a password."
+echo "*******************************************************"
+echo "Give the user $uid a password:"
 passwd $uid                                                                     # give the user a pw
-echo $separator
+echo "*******************************************************"
 echo ""
 usergroups='wheel,power,storage,audio,video,optical'
 usermod -aG $usergroups $uid                                                    # add user to different groups
@@ -134,5 +134,5 @@ then
     EndSection" >> /etc/X11/xorg.conf.d/30-touchpad.conf
 fi
 
-echo "Setup Finished, exiting now...\n"
+echo "Setup Finished, exiting now..."
 exit
