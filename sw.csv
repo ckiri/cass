@@ -3,7 +3,6 @@ ttf-dejavu,font family
 starship,shell prompt
 qtile,window manager
 python-psutil, cpu widget requirement for qtile
-alacritty,terminal emulator written in rust
 rsync,file sync
 jre-openjdk,java runtime enviroment
 fzf,fuzzy-file-finder
