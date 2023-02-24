@@ -29,9 +29,9 @@ echo "Do you want install zsh?"
 echo "[y/N]: "
 read shell
 echo ""
-echo "Do you want to install and setup virtualbox?"
+echo "Do you want to install and setup qemu/kvm?"
 echo "[y/N]: "
-read vbox
+read vm
 echo "*******************************************************"
 echo ""
 
@@ -101,9 +101,9 @@ then
 fi
 
 # install and setup qemu/kvm
-if [ $vbox == 'y' ]
+if [ $vm == 'y' ]
 then
-    pacman -S virtualbox dnsmasq vde2 bridge-utils
+    pacman -S qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils
               openbsd-netcat ebtables iptables libgeustfs
     usermod -aG libvirt $uid
     modprobe vboxdrv
