@@ -97,7 +97,7 @@ fi
 # install software for mobile devices
 if [ $typ == '1' ]
 then
-    sudo pacman -S tlp python-iwlib                                             # power management
+    sudo pacman -S tlp python-iwlib network-manager-applet                      # power management
 fi
 
 # install and setup qemu/kvm
