@@ -1,4 +1,6 @@
 Package Name,Description
+qtile,tiling window manager
+alacritty,terminal written in rust
 feh,program for setting bg pics
 ttf-dejavu,font family
 starship,shell prompt
