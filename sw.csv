@@ -62,3 +62,4 @@ xorg,X window system
 xorg-xinit,X.Org initilisation program
 papirus-icon-theme,icon theme
 plantuml,uml-tool
+dunst,notification program
