@@ -1,8 +1,10 @@
 Package Name,Description
+noto-fonts-emoji,google emojis
+noto-fonts,google fonts
+ttf-hack,libre monospace font
 qtile,tiling window manager
 alacritty,terminal written in rust
 feh,program for setting bg pics
-ttf-dejavu,font family
 starship,shell prompt
 python-psutil, cpu widget requirement for qtile
 rsync,file sync
@@ -44,23 +46,20 @@ blender,3d-rendering software
 ngspice,schematics simulator
 inkscape, vector graphics editor
 gimp,GNU Image Manipulation Program
-texlive-most,latex distribution
 gnuplot,math/physics plotting
 github-cli,cli for GitHub
 pass,standart unix password store
-thunderbird,e-mail client
-noto-fonts-emoji,google emojis
 pdftk,pdf tool
 zathura,pdf reader
 zathura-pdf-poppler,pdf poppler (reading pdfs)
 tipp10,tipp tutor
-code,ide
+intellij-idea-community-edition,java-ide
 octave,math language
 syncthing,sync files p2p
 firefox,web browser
-thunderbird,e-mail client
 scrcpy,stream screen of android device
 xorg,X window system
 xorg-xinit,X.Org initilisation program
 rofi,window switcher
 papirus-icon-theme,icon theme
+plantuml,uml-tool
