@@ -4,14 +4,12 @@ noto-fonts,google fonts
 ttf-hack,libre monospace font
 qtile,tiling window manager
 alacritty,terminal written in rust
-feh,program for setting bg pics
 starship,shell prompt
 python-psutil, cpu widget requirement for qtile
 rsync,file sync
 jre-openjdk,java runtime enviroment
 fzf,fuzzy-file-finder
 cifs-utils,common internet file system
-nmap,(aur/zenmap - GUI) analyse network
 cups,c unix printing service
 hplip,drivers for HP printer
 bind,dns protocol and utils
@@ -63,3 +61,4 @@ xorg-xinit,X.Org initilisation program
 papirus-icon-theme,icon theme
 plantuml,uml-tool
 dunst,notification program
+network-manager-applet,systray icon for nm
