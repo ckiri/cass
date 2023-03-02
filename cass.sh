@@ -103,8 +103,7 @@ fi
 # install and setup qemu/kvm
 if [ $vm == 'y' ]
 then
-    pacman -S qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils
-              openbsd-netcat ebtables iptables libgeustfs
+    pacman -S qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat ebtables iptables libguestfs
     usermod -aG libvirt $uid
     systemctl enable libvirtd.service                                           # enable virtualization for vm
     systemctl start libvirtd.service
